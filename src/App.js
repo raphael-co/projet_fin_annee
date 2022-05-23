@@ -3,6 +3,7 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Dashboard from './pages/Dashboard'
 import PageNotFound from './pages/PageNotFound'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
