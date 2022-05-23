@@ -1,15 +1,9 @@
 import { ComponentType } from 'react';
-import { dAppName } from 'config';
+import withPageTitle from 'components/PageTitle';
+// import { dAppName } from 'config';
 import Dashboard from 'pages/Dashboard';
 import Profile from 'pages/Profile';
-import Rewards from 'pages/Rewards';
-import Tokenomics from 'pages/Tokenomics';
-import withPageTitle from './components/PageTitle';
-import Admin from './pages/Admin';
 import Home from './pages/Home';
-import Presale from './pages/Presale';
-import PresaleAdmin from './pages/PresaleAdmin';
-import Transaction from './pages/Transaction';
 
 export interface RouteType {
   path: string;
@@ -42,55 +36,19 @@ const routes: Array<RouteType> = [
   {
     path: routeNames.dashboard,
     title: 'Dashboard',
-    component: Dashboard,
-    authenticatedRoute: true
+    component: Dashboard
+    // authenticatedRoute: true
   },
   {
     path: routeNames.profile,
     title: 'Profile',
-    component: Profile,
-    authenticatedRoute: true
-  },
-  {
-    path: routeNames.admin,
-    title: 'Admin',
-    component: Admin
-  },
-  {
-    path: routeNames.presale,
-    title: 'Presale',
-    component: Presale,
-    authenticatedRoute: true
-  },
-  {
-    path: routeNames.presaleAdmin,
-    title: 'PresaleAdmin',
-    component: PresaleAdmin,
-    authenticatedRoute: true
-  },
-  {
-    path: routeNames.rewards,
-    title: 'Rewards',
-    component: Rewards,
-    authenticatedRoute: true
-  },
-  {
-    path: routeNames.tokenomics,
-    title: 'Tokenomics',
-    component: Tokenomics,
-    authenticatedRoute: false
-  },
-  {
-    path: routeNames.transaction,
-    title: 'Transaction',
-    component: Transaction
+    component: Profile
+    // authenticatedRoute: true
   }
 ];
 
 const mappedRoutes = routes.map((route) => {
-  const title = route.title
-    ? `${route.title} • Elrond ${dAppName}`
-    : `Elrond ${dAppName}`;
+  const title = route.title ? `${route.title}` : ` ${route.title}`;
 
   const requiresAuth = Boolean(route.authenticatedRoute);
   const wrappedComponent = withPageTitle(title, route.component);
