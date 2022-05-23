@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { translate } from 'locale/local';
 import styles from './styles.module.scss';
 
-const Login = () => {
+const Register = () => {
   return (
     <div className='d-flex flex-fill align-items-center container'>
       <div className='row w-100'>
@@ -18,10 +18,17 @@ const Login = () => {
                 className='mb-3'
                 data-testid='title'
               >
-                {translate('Login', localStorage.getItem('langage'))}
+                {translate('Register', localStorage.getItem('langage'))}
               </h2>
               <form className='form'>
                 <div>
+                  <div style={{ color: 'white' }}>Username</div>
+                  <input
+                    type='text'
+                    className={styles.input}
+                    placeholder='Username'
+                    //   id='inlineFormInputGroupUsername2'
+                  />
                   <div style={{ color: 'white' }}>Email</div>
                   <input
                     type='email'
@@ -36,6 +43,13 @@ const Login = () => {
                     placeholder='password'
                     //   id='inlineFormInputGroupUsername2'
                   />
+                  <div style={{ color: 'white' }}> Valide Password</div>
+                  <input
+                    type='Password'
+                    className={styles.input}
+                    placeholder='Valide password'
+                    //   id='inlineFormInputGroupUsername2'
+                  />
                 </div>
               </form>
 
@@ -47,7 +61,7 @@ const Login = () => {
               </Button> */}
               <div className={styles.connects}>
                 <Link
-                  to='/dashboard'
+                  to='/login'
                   style={{ margin: 0, textDecoration: 'none' }}
                   className={styles.connects}
                 >
@@ -58,7 +72,7 @@ const Login = () => {
                   </span>
                 </Link>
                 <Link
-                  to='/register'
+                  to='/login'
                   style={{ margin: 0, textDecoration: 'none' }}
                   className={styles.connects}
                 >
@@ -77,4 +91,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

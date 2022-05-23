@@ -5,6 +5,7 @@ import Dashboard from 'pages/Dashboard';
 import Profile from 'pages/Profile';
 import Home from './pages/Home';
 import Login from 'pages/Login';
+import Register from 'pages/Register';
 
 export interface RouteType {
   path: string;
@@ -16,7 +17,8 @@ export const routeNames = {
   home: '/',
   profile: '/profile',
   dashboard: '/dashboard',
-  login: '/login'
+  login: '/login',
+  register: '/register'
 };
 
 const routes: Array<RouteType> = [
@@ -41,6 +43,12 @@ const routes: Array<RouteType> = [
     path: routeNames.login,
     title: 'Login',
     component: Login
+    // authenticatedRoute: true
+  },
+  {
+    path: routeNames.register,
+    title: 'Register',
+    component: Register
     // authenticatedRoute: true
   }
 ];
