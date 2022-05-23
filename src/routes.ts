@@ -4,11 +4,11 @@ import withPageTitle from 'components/PageTitle';
 import Dashboard from 'pages/Dashboard';
 import Profile from 'pages/Profile';
 import Home from './pages/Home';
+import Login from 'pages/Login';
 
 export interface RouteType {
   path: string;
   title: string;
-  authenticatedRoute?: boolean;
   component: ComponentType;
 }
 
@@ -16,15 +16,7 @@ export const routeNames = {
   home: '/',
   profile: '/profile',
   dashboard: '/dashboard',
-  presale: '/presale',
-  presaleAdmin: '/presaleAdmin',
-  rewards: '/rewards',
-  tokenomics: '/tokenomics',
-  transaction: '/transaction',
-  unlock: '/unlock',
-  ledger: '/ledger',
-  walletconnect: '/walletconnect',
-  admin: '/admin'
+  login: '/login'
 };
 
 const routes: Array<RouteType> = [
@@ -44,19 +36,23 @@ const routes: Array<RouteType> = [
     title: 'Profile',
     component: Profile
     // authenticatedRoute: true
+  },
+  {
+    path: routeNames.login,
+    title: 'Login',
+    component: Login
+    // authenticatedRoute: true
   }
 ];
 
 const mappedRoutes = routes.map((route) => {
   const title = route.title ? `${route.title}` : ` ${route.title}`;
 
-  const requiresAuth = Boolean(route.authenticatedRoute);
   const wrappedComponent = withPageTitle(title, route.component);
 
   return {
     path: route.path,
-    component: wrappedComponent,
-    authenticatedRoute: requiresAuth
+    component: wrappedComponent
   };
 });
 
