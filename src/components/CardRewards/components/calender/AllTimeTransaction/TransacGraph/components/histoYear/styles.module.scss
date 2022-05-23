@@ -1,0 +1,91 @@
+.cards{
+    grid-column-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:10px;
+
+    .card{
+        cursor: 'pointer' !important;
+        height: '15vh';
+        border: 1px solid #ffffff;
+        padding-Left: 0;
+        padding-right:0 ;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.1);
+        color: rgba(white, 0.85);
+        line-height: 1;
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        flex-grow: 1;
+        width: 33%;
+        margin-bottom:20px;
+        height:10vh;
+        margin-left:10px;
+        margin-right:10px;
+        @media (min-width: 900px) {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 21%;
+          min-width: 21%;
+        }
+
+          @media (min-height: 0px) {
+            height: 80px;
+          }
+    
+          @media (min-height: 600px) {
+            height:10vh;
+          }
+        
+
+        .value{
+            text-align: center;
+            height: 80%;
+            padding-top: 16%;
+            padding: auto;
+        
+            @media (min-width: 400px) {
+              padding-top: 25%;
+            }
+            @media (min-width: 460px) {
+              padding-top: 18%;
+            }
+            @media (min-width: 500px) {
+              padding-top: 15%;
+            }
+            @media (min-width: 600px) {
+              padding-top: 13%;
+            }
+            @media (min-width: 700px) {
+              padding-top: 11%;
+            }
+            @media (min-width: 800px) {
+              padding-top: 9%;
+            }
+            @media (min-width: 900px) {
+              padding-top: 14%;
+            }
+            @media (min-width: 1000px) {
+              padding-top: 11%;
+            }
+        }
+        .month{
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+    .card:hover{
+        cursor: 'pointer' !important;
+        border-color: #5bd566;
+        .month{
+            cursor: 'pointer' !important;
+            border-color: #5bd566;
+        }
+      }
+}
+
+.calender{
+  margin: 0 !important;
+  padding: 0 !important;
+}

@@ -1,0 +1,20 @@
+.dashboard {
+  max-width: 80%;
+  margin: 20px auto 20px;
+  background: rgba(0, 6, 13, 0.2);
+  border: 1px solid rgba(black, 0.1);
+  border-radius: 12px;
+  padding: 45px 30px;
+  width: 100%;
+
+  .cardscolor {
+    background: rgba(36, 37, 38, 0.5);
+    border: 1px solid #49494d;
+    border-radius: 12px;
+  }
+
+  .colorborder{
+    background: transparent !important;
+    border: none !important;
+  }
+}

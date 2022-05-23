@@ -1,0 +1,10 @@
+.scrollTaille {
+  min-width: 400px;
+}
+.scroll {
+  max-width:  100%;
+  overflow-x: scroll;
+  @media (min-width: 750px) {
+    overflow-x: visible;
+  }
+}
