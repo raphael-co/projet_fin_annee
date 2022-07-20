@@ -1,0 +1,25 @@
+.dashboard {
+  max-width: 1480px;
+  margin: 20px auto 20px;
+  background: rgba(0, 6, 13, 0.2);
+  border: 1px solid rgba(black, 0.1);
+  border-radius: 12px;
+  padding: 45px 30px;
+  width: 100%;
+
+  .cardscolor {
+    border-radius: 12px;
+    background: rgba(36, 37, 38, 0.5);
+    border: 1px solid #49494d;
+    text-align: center;
+  }
+
+  .tdcenter {
+    text-align: center !important;
+  }
+
+  .tab {
+    background: transparent !important;
+    color: white !important
+  }
+}
